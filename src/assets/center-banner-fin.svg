@@ -1,0 +1,22 @@
+<svg width="888" height="136" viewBox="0 0 888 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="888" height="136" fill="#8FCC63"/>
+  <text x="10" y="40" fill="white" font-family="Arial, sans-serif" font-size="54" font-weight="900">K</text>
+  <text x="61" y="26" fill="white" font-family="Arial, sans-serif" font-size="7" font-weight="700">★★★★★</text>
+  <text x="62" y="38" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="700">AGENT K</text>
+  <text x="794" y="23" fill="#008BD2" font-family="Arial, sans-serif" font-size="16" font-weight="900">에이전트케이</text>
+  <circle cx="363" cy="40" r="19" fill="#008F9F"/>
+  <circle cx="410" cy="40" r="19" fill="#F26922"/>
+  <circle cx="457" cy="40" r="19" fill="#F6B33F"/>
+  <circle cx="504" cy="40" r="19" fill="#C251A9"/>
+  <text x="355" y="51" fill="white" font-family="Arial, sans-serif" font-size="30" font-weight="700">$</text>
+  <text x="399" y="51" fill="white" font-family="Arial, sans-serif" font-size="30" font-weight="700">元</text>
+  <text x="447" y="51" fill="white" font-family="Arial, sans-serif" font-size="30" font-weight="700">¥</text>
+  <text x="495" y="51" fill="white" font-family="Arial, sans-serif" font-size="30" font-weight="700">€</text>
+  <text x="316" y="96" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="900">365일 언제나 안전하고</text>
+  <text x="316" y="121" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="900">투명한 환전을 해드려요!</text>
+  <g transform="translate(620 48) rotate(-15)">
+    <path d="M33 2L53 66L108 82L111 95L54 91L32 133L20 130L24 88L-8 74L-5 64L25 69L20 7L33 2Z" fill="white" stroke="#E5E5E5" stroke-width="2"/>
+    <path d="M53 66L91 49" stroke="#BFC4C8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M25 69L5 46" stroke="#BFC4C8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

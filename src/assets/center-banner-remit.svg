@@ -1,0 +1,25 @@
+<svg width="888" height="136" viewBox="0 0 888 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="888" height="136" fill="white"/>
+  <rect x="0.5" y="0.5" width="887" height="135" stroke="#111"/>
+  <text x="42" y="76" fill="#111111" font-family="Arial, sans-serif" font-size="22" font-weight="900">훨씬</text>
+  <text x="96" y="90" fill="#EB145A" font-family="Arial, sans-serif" font-size="88" font-weight="900">쉽고</text>
+  <text x="264" y="88" fill="#21448A" font-family="Arial, sans-serif" font-size="64" font-weight="900">빠른 환전</text>
+  <text x="565" y="14" fill="#555" font-family="Arial, sans-serif" font-size="13">Macao</text>
+  <rect x="565" y="18" width="78" height="54" fill="#00785E"/>
+  <circle cx="604" cy="47" r="14" fill="white" opacity="0.9"/>
+  <text x="655" y="42" fill="#111" font-family="serif" font-size="16">兌換</text>
+  <text x="655" y="64" fill="#111" font-family="serif" font-size="16">汇款</text>
+  <line x1="690" y1="18" x2="690" y2="72" stroke="#D0D0D0" stroke-width="2"/>
+  <text x="754" y="14" fill="#555" font-family="Arial, sans-serif" font-size="13">Vietnam</text>
+  <text x="704" y="40" fill="#111" font-family="serif" font-size="16">Đổi tiền</text>
+  <text x="704" y="62" fill="#111" font-family="serif" font-size="16">Gửi tiền</text>
+  <rect x="754" y="18" width="76" height="54" fill="#EF3340"/>
+  <path d="M792 31L796 43H809L798 50L802 63L792 55L782 63L786 50L775 43H788L792 31Z" fill="#FFDE00"/>
+  <rect x="565" y="84" width="238" height="43" rx="6" fill="#E9E9E9"/>
+  <circle cx="587" cy="106" r="14" fill="#20A9E0"/>
+  <circle cx="622" cy="106" r="14" fill="#F26522"/>
+  <circle cx="657" cy="106" r="14" fill="#7E58C2"/>
+  <circle cx="692" cy="106" r="14" fill="#2ABC7F"/>
+  <text x="721" y="105" fill="#EB145A" font-family="Arial, sans-serif" font-size="18" font-weight="900">환전가능</text>
+  <text x="721" y="121" fill="#111" font-family="Arial, sans-serif" font-size="11" font-weight="700">환전 · 해외송금 · 외화예금</text>
+</svg>
