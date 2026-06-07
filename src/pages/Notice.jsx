@@ -10,7 +10,7 @@ export default function Notice() {
       id: 2,
       title: '신규 지점 오픈 안내',
       date: '2026-06-01',
-      content: '광장시장점이 새로 오픈했습니다. 많은 이용 부탁드립니다.'
+      content: '마카오 지점에 이어 호이안 지점이 새로 오픈했습니다. 많은 이용 부탁드립니다.'
     },
     {
       id: 3,

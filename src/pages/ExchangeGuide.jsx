@@ -28,7 +28,7 @@ export default function ExchangeGuide() {
           </div>
           <div className="flex items-center justify-center pt-[14px] text-[13px] font-light tracking-[-1px] text-[#666666]">
             <img src={arrowIcon} alt="" className="mr-[6px] inline-block align-middle" />
-            머니박스는 고객의 개인정보를 보호하고 있습니다.
+            에이전트k는 고객의 개인정보를 보호하고 있습니다.
           </div>
         </div>
 
