@@ -9,6 +9,7 @@ export default function SimpleHeader() {
 
   const menuItems = [
     { title: '에이전트K', items: [{ label: '에이전트K 소개', path: '/shop01' }] },
+    { title: '예약환전', items: [{ label: '즉시환전예약', path: '/' }, { label: '1:1맞춤환전예약', path: '/custom-exchange' }, { label: '예약내역확인', path: '/reservation-history' }] },
     { title: '알림게시판', items: [{ label: '공지사항', path: '/notice' }, { label: 'FAQ', path: '/faq' }] },
     { title: '정책 및 이용안내', items: [{ label: '환전예약 이용안내', path: '/info01' }, { label: '개인정보 보호정책', path: '/policy' }] }
   ]
@@ -68,14 +69,6 @@ export default function SimpleHeader() {
                   </div>
                 </div>
               ))}
-                <div>
-                  <h3 className="border-b border-[#dddddd] pb-[15px] text-left text-[1.3em] font-medium text-[#333333]">예약환전</h3>
-                  <div className="mt-[15px]">
-                    <Link to="/" onClick={() => setMobileMenuOpen(false)} className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]">- 즉시환전예약</Link>
-                    <Link to="/custom-exchange" onClick={() => setMobileMenuOpen(false)} className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]">- 1:1맞춤환전예약</Link>
-                    <Link to="/reservation-history" onClick={() => setMobileMenuOpen(false)} className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]">- 예약내역확인</Link>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -87,15 +80,6 @@ export default function SimpleHeader() {
 
             <div className="px-[22px] pt-[66px]">
               <div className="border-t border-[rgba(255,255,255,0.28)]">
-                <div className="border-b border-[rgba(255,255,255,0.28)] py-[22px] text-left font-['Noto_Sans_KR','dotum',sans-serif] text-white">
-                  <h3 className="mb-[15px] text-[18px] font-bold leading-none tracking-[-1px]">예약환전</h3>
-                  <div className="space-y-[13px]">
-                    <Link to="/" onClick={() => setMobileMenuOpen(false)} className="block text-[16px] font-medium leading-none tracking-[-1px] text-white">- 즉시환전예약</Link>
-                    <Link to="/custom-exchange" onClick={() => setMobileMenuOpen(false)} className="block text-[16px] font-medium leading-none tracking-[-1px] text-white">- 1:1맞춤환전예약</Link>
-                    <Link to="/reservation-history" onClick={() => setMobileMenuOpen(false)} className="block text-[16px] font-medium leading-none tracking-[-1px] text-white">- 예약내역확인</Link>
-                  </div>
-                </div>
-
                 {menuItems.map((menu, idx) => (
                 <div key={idx} className="border-b border-[rgba(255,255,255,0.28)] py-[22px] text-left font-['Noto_Sans_KR','dotum',sans-serif] text-white">
                   <h3 className="mb-[15px] text-[18px] font-bold leading-none tracking-[-1px]">
