@@ -37,9 +37,47 @@ export default function SimpleHeader() {
       {/* 모바일 메뉴 팝업 */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[200] bg-[rgba(0,0,0,0.78)]" onClick={() => setMobileMenuOpen(false)}>
-          <div className="relative min-h-screen w-[338px] max-w-[82vw] bg-[#0072ce]" onClick={(e) => e.stopPropagation()}>
+          <div className="relative hidden w-full bg-white md:block" onClick={(e) => e.stopPropagation()}>
+            <button type="button" onClick={() => setMobileMenuOpen(false)} className="absolute right-[20px] top-[20px] z-10 h-[35px] w-[35px]">
+              <img src={closeIcon} alt="닫기" className="h-full w-full" />
+            </button>
+
+            <div className="mx-auto max-w-[1280px] px-[40px] py-[60px]">
+              <div className="grid grid-cols-4 gap-8">
+                {menuItems.map((menu, idx) => (
+                <div key={idx}>
+                  <h3 className="border-b border-[#dddddd] pb-[15px] text-left text-[1.3em] font-medium text-[#333333]">
+                    {menu.title}
+                  </h3>
+                  <div className="mt-[15px]">
+                    {menu.items.map((item, i) => (
+                      <Link
+                        key={i}
+                        to={item.path}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]"
+                      >
+                        - {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+                <div>
+                  <h3 className="border-b border-[#dddddd] pb-[15px] text-left text-[1.3em] font-medium text-[#333333]">예약환전</h3>
+                  <div className="mt-[15px]">
+                    <Link to="/" onClick={() => setMobileMenuOpen(false)} className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]">- 즉시환전예약</Link>
+                    <Link to="/custom-exchange" onClick={() => setMobileMenuOpen(false)} className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]">- 1:1맞춤환전예약</Link>
+                    <Link to="/reservation-history" onClick={() => setMobileMenuOpen(false)} className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]">- 예약내역확인</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative min-h-screen w-[338px] max-w-[82vw] bg-[#0072ce] md:hidden" onClick={(e) => e.stopPropagation()}>
             <button type="button" onClick={() => setMobileMenuOpen(false)} className="absolute right-[14px] top-[14px] z-10 h-[28px] w-[28px]">
-              <img src={closeIcon} alt="닫기" className="h-full w-full brightness-0 invert" />
+              <img src={closeIcon} alt="닫기" className="h-full w-full" />
             </button>
 
             <div className="px-[22px] pt-[66px]">
