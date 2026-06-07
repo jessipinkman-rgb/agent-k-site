@@ -18,7 +18,7 @@ export default function SimpleHeader() {
       {/* 고정 헤더 */}
       <header className="sticky top-0 z-[50] border-b border-[rgba(255,255,255,.2)] bg-white shadow-[0_1px_5px_0_#000]">
         <div className="relative flex h-[55px] w-full items-start justify-between px-[15px] text-center md:h-[100px] md:px-[20px]">
-          <div className="absolute left-[15px] top-0 flex h-[55px] w-[60px] items-center text-left md:left-[20px] md:h-[100px] md:w-[100px]"><Link to="/"><img src={logoImg} alt="logo" className="h-auto w-[55px] object-contain md:w-[90px]" /></Link></div>
+          <div className="absolute left-[15px] top-0 z-10 flex h-[55px] w-[60px] items-center text-left md:left-[20px] md:h-[100px] md:w-[100px]"><Link to="/" className="block"><img src={logoImg} alt="logo" className="h-auto w-[55px] object-contain md:w-[90px]" /></Link></div>
           <div className="mx-auto mt-[13px] flex items-center justify-center text-[16px] leading-none tracking-[-1.5px] text-black md:mt-[22px] md:text-[30px] md:leading-none md:tracking-normal">
             <Link to="/" className="flex items-center gap-[6px] md:gap-[10px]">
               <img src={homeIcon} alt="" className="hidden w-[42px] self-center md:block" />

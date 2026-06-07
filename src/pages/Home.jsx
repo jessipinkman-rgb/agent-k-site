@@ -12,7 +12,7 @@ export default function Home() {
       <div className="relative mx-auto w-full max-w-[930px] px-5 py-5 text-center">
         
         <nav className="mb-[35px] flex h-[30px] items-center justify-center whitespace-nowrap p-[5px] font-['Noto_Sans_KR','dotum',sans-serif]">
-          <Link to="/exchange" className="inline-block border-t-2 border-[#008aff] pt-[4px] text-[18px] font-medium leading-none text-[#008aff] transition-colors">즉시환전예약</Link>
+          <Link to="/" className="inline-block border-t-2 border-[#008aff] pt-[4px] text-[18px] font-medium leading-none text-[#008aff] transition-colors">즉시환전예약</Link>
           <span className="inline-block w-4 text-[18px] font-normal leading-none text-black">·</span>
           <Link to="/custom-exchange" className="inline-block text-[16px] font-normal leading-none text-black hover:text-[#008aff] transition-colors">1:1맞춤환전예약</Link>
           <span className="inline-block w-4 text-[18px] font-normal leading-none text-black">·</span>
@@ -20,10 +20,10 @@ export default function Home() {
         </nav>
 
         <div className="relative mx-auto w-full max-w-[930px]">
-          <div className="relative mx-auto flex w-[443px] flex-col text-center">
+          <div className="relative mx-auto flex w-full max-w-[443px] flex-col text-center">
             <button
               onClick={() => setExchangeType('buy')}
-              className={`relative block w-[443px] rounded-t-[10px] p-[10px] text-center leading-none transition-colors ${
+              className={`relative block w-full rounded-t-[10px] p-[10px] text-center leading-none transition-colors ${
                 exchangeType === 'buy'
                   ? 'bg-[#f6905d] text-[18px] text-white'
                   : 'bg-[#efefef] text-[14px] text-[#aaaaaa] hover:bg-[#efefef]'
@@ -33,7 +33,7 @@ export default function Home() {
             </button>
             <button
               onClick={() => setExchangeType('sell')}
-              className={`relative block w-[443px] p-[10px] text-center leading-none transition-colors ${
+              className={`relative block w-full p-[10px] text-center leading-none transition-colors ${
                 exchangeType === 'sell'
                   ? 'bg-[#4bc3cf] text-[18px] text-white'
                   : 'bg-[#efefef] text-[14px] text-[#aaaaaa] hover:bg-[#efefef]'
@@ -43,14 +43,14 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="relative mb-12 rounded-b-[10px] border-[3px] border-[#f6905d] bg-white p-[40px]">
+          <div className="relative mb-12 rounded-b-[10px] border-[3px] border-[#f6905d] bg-white p-[18px] md:p-[40px]">
             <div className="w-full">
               <div className="border border-gray-200 rounded-lg divide-y divide-gray-200 bg-gray-50 overflow-hidden mb-5">
-                <div className="flex items-center p-4 bg-white">
-                  <label className="w-1/4 text-sm font-medium text-gray-700 flex items-center">
+                <div className="flex items-center p-3 bg-white md:p-4">
+                  <label className="flex w-[86px] shrink-0 items-center text-sm font-medium text-gray-700 md:w-1/4">
                     <span className="text-gray-400 mr-1.5">{'•'}</span> 통화선택
                   </label>
-                  <div className="w-3/4">
+                  <div className="min-w-0 flex-1 md:w-3/4">
                     <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary-orange">
                       <option value="USD">USD</option>
                       <option value="JPY">JPY</option>
@@ -61,11 +61,11 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-center p-4 bg-white">
-                  <label className="w-1/4 text-sm font-medium text-gray-700 flex items-center">
+                <div className="flex items-center p-3 bg-white md:p-4">
+                  <label className="flex w-[86px] shrink-0 items-center text-sm font-medium text-gray-700 md:w-1/4">
                     <span className="text-gray-400 mr-1.5">{'•'}</span> 사실때환율
                   </label>
-                  <div className="w-3/4 flex items-center">
+                  <div className="flex min-w-0 flex-1 items-center md:w-3/4">
                     <input
                       type="text"
                       value="1529.8605"
@@ -86,11 +86,11 @@ export default function Home() {
               </div>
 
               <div className="border border-gray-200 rounded-lg divide-y divide-gray-200 bg-gray-50 overflow-hidden mb-6">
-                <div className="flex items-center p-4 bg-white">
-                  <label className="w-1/4 text-sm font-medium text-gray-700 flex items-center">
+                <div className="flex items-center p-3 bg-white md:p-4">
+                  <label className="flex w-[86px] shrink-0 items-center text-sm font-medium text-gray-700 md:w-1/4">
                     <span className="text-gray-400 mr-1.5">{'•'}</span> 환전금액
                   </label>
-                  <div className="w-3/4 flex items-center">
+                  <div className="flex min-w-0 flex-1 items-center md:w-3/4">
                     <input
                       type="text"
                       placeholder="20 단위"
@@ -100,11 +100,11 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-center p-4 bg-white">
-                  <label className="w-1/4 text-sm font-medium text-gray-700 flex items-center">
+                <div className="flex items-center p-3 bg-white md:p-4">
+                  <label className="flex w-[86px] shrink-0 items-center text-sm font-medium text-gray-700 md:w-1/4">
                     <span className="text-gray-400 mr-1.5">{'•'}</span> 지급하실금액
                   </label>
-                  <div className="w-3/4">
+                  <div className="min-w-0 flex-1 md:w-3/4">
                     <input
                       type="text"
                       readOnly

@@ -14,23 +14,23 @@ export default function ReservationHistory() {
 
         <form className="mx-auto w-full max-w-[930px]" onSubmit={(e) => e.preventDefault()}>
           <input type="submit" className="h-0 w-0 border-0 p-0" value="검색" />
-          <div className="relative w-full rounded-[10px] border-[3px] border-[#f6905d] bg-white p-[40px]">
+          <div className="relative w-full rounded-[10px] border-[3px] border-[#f6905d] bg-white p-[18px] md:p-[40px]">
             <div className="relative inline-block w-full">
-              <div className="relative mb-[5px] w-full border border-[#dfdfdf] bg-[#fafafa] p-[8px] align-middle">
-                <div className="relative inline-block w-[150px] text-left text-[14px] align-middle">· 성명</div>
-                <div className="relative inline-block w-[600px] text-left text-[14px] align-middle">
+              <div className="relative mb-[5px] flex w-full items-center border border-[#dfdfdf] bg-[#fafafa] p-[8px] align-middle">
+                <div className="relative w-[105px] shrink-0 text-left text-[14px] align-middle md:w-[150px]">· 성명</div>
+                <div className="relative min-w-0 flex-1 text-left text-[14px] align-middle">
                   <input type="text" name="nm" className="h-[32px] w-full border border-[#dddddd] bg-white px-[8px] text-[14px] outline-none" />
                 </div>
               </div>
-              <div className="relative mb-[5px] w-full border border-[#dfdfdf] bg-[#fafafa] p-[8px] align-middle">
-                <div className="relative inline-block w-[150px] text-left text-[14px] align-middle">· 휴대폰번호</div>
-                <div className="relative inline-block w-[600px] text-left text-[14px] align-middle">
+              <div className="relative mb-[5px] flex w-full items-center border border-[#dfdfdf] bg-[#fafafa] p-[8px] align-middle">
+                <div className="relative w-[105px] shrink-0 text-left text-[14px] align-middle md:w-[150px]">· 휴대폰번호</div>
+                <div className="relative min-w-0 flex-1 text-left text-[14px] align-middle">
                   <input type="text" name="mobile" className="h-[32px] w-full border border-[#dddddd] bg-white px-[8px] text-[14px] outline-none" />
                 </div>
               </div>
-              <div className="relative w-full border border-[#dfdfdf] bg-[#fafafa] p-[8px] align-middle">
-                <div className="relative inline-block w-[150px] text-left text-[14px] align-middle">· 비밀번호</div>
-                <div className="relative inline-block w-[600px] text-left text-[14px] align-middle">
+              <div className="relative flex w-full items-center border border-[#dfdfdf] bg-[#fafafa] p-[8px] align-middle">
+                <div className="relative w-[105px] shrink-0 text-left text-[14px] align-middle md:w-[150px]">· 비밀번호</div>
+                <div className="relative min-w-0 flex-1 text-left text-[14px] align-middle">
                   <input type="password" name="pass" className="h-[32px] w-full border border-[#dddddd] bg-white px-[8px] text-[14px] outline-none" />
                 </div>
               </div>

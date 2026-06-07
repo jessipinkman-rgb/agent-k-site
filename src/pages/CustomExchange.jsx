@@ -5,8 +5,8 @@ import centerBanner2 from '../assets/center-banner-2.png.png'
 
 const InputLine = ({ label, children }) => (
   <div className="relative mb-[5px] flex w-full items-center border border-[#dfdfdf] bg-[#fafafa] p-[8px] align-middle">
-    <div className="relative w-[150px] shrink-0 text-left text-[14px] tracking-[-1px] text-[#333333]">· {label}</div>
-    <div className="relative flex-1 text-left text-[14px]">{children}</div>
+    <div className="relative w-[105px] shrink-0 text-left text-[14px] tracking-[-1px] text-[#333333] md:w-[150px]">· {label}</div>
+    <div className="relative min-w-0 flex-1 text-left text-[14px]">{children}</div>
   </div>
 )
 
@@ -39,16 +39,16 @@ export default function CustomExchange() {
         </nav>
 
         <form onSubmit={(e) => e.preventDefault()}>
-          <div className="relative mx-auto flex w-[443px] flex-col text-center">
-            <button type="button" className="relative block w-[443px] rounded-t-[10px] bg-[#f6905d] p-[10px] text-center text-[18px] leading-none text-white">
+          <div className="relative mx-auto flex w-full max-w-[443px] flex-col text-center">
+            <button type="button" className="relative block w-full rounded-t-[10px] bg-[#f6905d] p-[10px] text-center text-[18px] leading-none text-white">
               외화사실때 <span className="text-[11px] font-extralight tracking-[-1px] align-middle">( 원화 → 외화 )</span>
             </button>
-            <button type="button" className="relative block w-[443px] bg-[#efefef] p-[10px] text-center text-[14px] leading-none text-[#aaaaaa]">
+            <button type="button" className="relative block w-full bg-[#efefef] p-[10px] text-center text-[14px] leading-none text-[#aaaaaa]">
               외화파실때 <span className="text-[11px] font-normal align-middle">( 외화 → 원화 )</span>
             </button>
           </div>
 
-          <div className="relative rounded-b-[10px] border-[3px] border-[#f6905d] bg-white p-[40px]">
+          <div className="relative rounded-b-[10px] border-[3px] border-[#f6905d] bg-white p-[18px] md:p-[40px]">
             <div className="relative inline-block w-full">
               <InputLine label="통화선택">
                 <select className="h-[32px] w-full border border-[#dddddd] bg-white px-[8px] text-[14px] text-[#333333] outline-none">
@@ -114,7 +114,7 @@ export default function CustomExchange() {
           </div>
 
           <div className="mt-[40px] text-center text-[18px] font-medium tracking-[-1px] text-[#333333]">신청인 정보입력</div>
-          <div className="mt-[15px] rounded-[10px] border-[3px] border-[#f6905d] bg-white p-[40px]">
+          <div className="mt-[15px] rounded-[10px] border-[3px] border-[#f6905d] bg-white p-[18px] md:p-[40px]">
             <InputLine label="성명"><TextInput /></InputLine>
             <InputLine label="비밀번호"><TextInput type="password" /></InputLine>
             <InputLine label="비밀번호확인"><TextInput type="password" /></InputLine>
