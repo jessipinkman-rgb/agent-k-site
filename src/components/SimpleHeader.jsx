@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logoImg from '../assets/logo.png'
+import homeIcon from '../assets/icon_home.svg'
+import closeIcon from '../assets/close.svg'
 
 export default function SimpleHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -14,18 +16,19 @@ export default function SimpleHeader() {
   return (
     <>
       {/* 고정 헤더 */}
-      <header className="sticky top-0 z-[50] bg-white border-b border-gray-100 shadow-[0_2px_4px_rgba(0,0,0,0.08)]">
-        <div className="flex justify-between items-center px-6 h-[80px]">
-          <div className="flex-1 flex justify-start"><Link to="/"><img src={logoImg} alt="logo" className="h-10 w-auto" /></Link></div>
-          <div className="flex-1 flex justify-center items-center gap-2 font-semibold text-xl tracking-tight text-gray-900">
-            <Link to="/" className="flex items-center gap-2">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-              에이전트K
+      <header className="sticky top-0 z-[50] border-b border-[rgba(255,255,255,.2)] bg-white shadow-[0_1px_5px_0_#000]">
+        <div className="relative flex h-[55px] w-full items-start justify-between px-[15px] text-center md:h-[100px] md:px-[20px]">
+          <div className="absolute left-[15px] top-0 flex h-[55px] w-[60px] items-center text-left md:left-[20px] md:h-[100px] md:w-[100px]"><Link to="/"><img src={logoImg} alt="logo" className="h-auto w-[55px] object-contain md:w-[90px]" /></Link></div>
+          <div className="mx-auto mt-[13px] flex items-center justify-center text-[16px] leading-none tracking-[-1.5px] text-black md:mt-[22px] md:text-[30px] md:leading-none md:tracking-normal">
+            <Link to="/" className="flex items-center gap-[6px] md:gap-[10px]">
+              <img src={homeIcon} alt="" className="hidden w-[42px] self-center md:block" />
+              <span className="font-light">AGENTK</span>
+              <strong className="font-bold">에이전트케이</strong>
             </Link>
           </div>
-          <div className="flex-1 flex justify-end">
-            <button onClick={() => setMobileMenuOpen(true)} className="p-2">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          <div className="absolute right-[10px] top-0 flex h-[55px] w-[35px] items-center justify-center md:right-[20px] md:h-[100px]">
+            <button onClick={() => setMobileMenuOpen(true)} className="p-0">
+              <svg className="h-[50px] w-[24px] md:h-[100px] md:w-[36px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
           </div>
         </div>
@@ -33,32 +36,26 @@ export default function SimpleHeader() {
 
       {/* 모바일 메뉴 팝업 */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[200] bg-white overflow-y-auto" onClick={() => setMobileMenuOpen(false)}>
-          {/* 헤더와 완전히 동일한 구조의 상단 닫기 바 */}
-          <div className="flex justify-between items-center px-6 h-[80px] border-b border-gray-100">
-            <div className="flex-1"></div>
-            <div className="flex-1 text-center font-semibold text-xl">메뉴</div>
-            <div className="flex-1 flex justify-end">
-              <button onClick={() => setMobileMenuOpen(false)} className="p-2">
-                <img src="https://moneyboxkjm.com/img/close.svg" alt="close" className="w-10 h-10" />
-              </button>
-            </div>
-          </div>
+        <div className="fixed inset-0 z-[200] bg-[rgba(0,0,0,0.8)]" onClick={() => setMobileMenuOpen(false)}>
+          <div className="relative w-full bg-white" onClick={(e) => e.stopPropagation()}>
+            <button onClick={() => setMobileMenuOpen(false)} className="absolute right-[20px] top-[20px] z-10 h-[28px] w-[28px] md:h-[35px] md:w-[35px]">
+              <img src={closeIcon} alt="닫기" className="h-full w-full" />
+            </button>
 
-          <div className="max-w-7xl mx-auto py-12 px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="mx-auto max-w-[1280px] px-[40px] py-[60px]">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
               {menuItems.map((menu, idx) => (
                 <div key={idx}>
-                  <h3 className="text-[20px] font-bold text-gray-900 mb-6 tracking-tight border-b border-gray-200 pb-4">
+                  <h3 className="border-b border-[#dddddd] pb-[15px] text-left text-[1.3em] font-medium text-[#333333]">
                     {menu.title}
                   </h3>
-                  <div className="space-y-1">
+                  <div className="mt-[15px]">
                     {menu.items.map((item, i) => (
                       <Link 
                         key={i} 
                         to={item.path} 
                         onClick={() => setMobileMenuOpen(false)} 
-                        className="block text-[18px] text-gray-500 hover:text-black transition-colors"
+                        className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]"
                       >
                         - {item.label}
                       </Link>
@@ -66,6 +63,15 @@ export default function SimpleHeader() {
                   </div>
                 </div>
               ))}
+                <div>
+                  <h3 className="border-b border-[#dddddd] pb-[15px] text-left text-[1.3em] font-medium text-[#333333]">예약환전</h3>
+                  <div className="mt-[15px]">
+                    <Link to="/" onClick={() => setMobileMenuOpen(false)} className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]">- 즉시환전예약</Link>
+                    <Link to="/custom-exchange" onClick={() => setMobileMenuOpen(false)} className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]">- 1:1맞춤환전예약</Link>
+                    <Link to="/reservation-history" onClick={() => setMobileMenuOpen(false)} className="my-[5px] block text-left text-[16px] font-normal leading-[20px] text-[#666666] transition-colors hover:text-[#ff6f00]">- 예약내역확인</Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default function ExchangeRateWidget() {
   const [krwAmount, setKrwAmount] = useState(10000)
 
   const MARGIN = 1.5
-  const CURRENCIES = ['USD', 'JPY', 'TWD', 'HKD', 'MOP', 'CNY', 'EUR']
+  const CURRENCIES = ['USD', 'JPY', 'TWD', 'HKD', 'CNY', 'EUR']
 
   useEffect(() => {
     fetchExchangeRates()
@@ -42,7 +42,6 @@ export default function ExchangeRateWidget() {
         'JPY': { baseRate: '0.114', marginRate: '0.116' },
         'TWD': { baseRate: '0.0244', marginRate: '0.0248' },
         'HKD': { baseRate: '0.0061', marginRate: '0.0062' },
-        'MOP': { baseRate: '0.0062', marginRate: '0.0063' },
         'CNY': { baseRate: '0.0111', marginRate: '0.0113' },
         'EUR': { baseRate: '0.00084', marginRate: '0.00085' }
       }
@@ -54,7 +53,7 @@ export default function ExchangeRateWidget() {
   }
 
   const getCurrencySymbol = (code) => {
-    const symbols = { USD: '$', JPY: '¥', HKD: '🇭🇰 $', MOP: '🇲🇴 MOP', CNY: '¥', EUR: '€' }
+    const symbols = { USD: '$', JPY: '¥', CNY: '¥', EUR: '€' }
     return symbols[code] || code
   }
 
@@ -127,7 +126,6 @@ export default function ExchangeRateWidget() {
                       {currency === 'JPY' && '일본 엔'}
                       {currency === 'TWD' && '대만 달러'}
                       {currency === 'HKD' && '홍콩 달러'}
-                      {currency === 'MOP' && '마카오 파타카'}
                       {currency === 'CNY' && '중국 위안'}
                       {currency === 'EUR' && '유로'}
                     </p>
