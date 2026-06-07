@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import SimpleHeader from './components/SimpleHeader'
 import FloatingButton from './components/FloatingButton'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import CustomExchange from './pages/CustomExchange'
 import AgentKIntro from './pages/AgentKIntro'
@@ -13,17 +14,22 @@ import ReservationHistory from './pages/ReservationHistory'
 function App() {
   return (
     <Router>
-      <SimpleHeader />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/custom-exchange" element={<CustomExchange />} />
-        <Route path="/shop01" element={<AgentKIntro />} />
-        <Route path="/notice" element={<Notice />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/info01" element={<ExchangeGuide />} />
-        <Route path="/policy" element={<PrivacyPolicy />} />
-        <Route path="/reservation-history" element={<ReservationHistory />} />
-      </Routes>
+      <div className="flex min-h-screen flex-col bg-white">
+        <SimpleHeader />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/custom-exchange" element={<CustomExchange />} />
+            <Route path="/shop01" element={<AgentKIntro />} />
+            <Route path="/notice" element={<Notice />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/info01" element={<ExchangeGuide />} />
+            <Route path="/policy" element={<PrivacyPolicy />} />
+            <Route path="/reservation-history" element={<ReservationHistory />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
       <FloatingButton />
     </Router>
   )

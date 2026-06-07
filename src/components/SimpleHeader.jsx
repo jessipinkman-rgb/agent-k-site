@@ -16,7 +16,7 @@ export default function SimpleHeader() {
   return (
     <>
       {/* 고정 헤더 */}
-      <header className="sticky top-0 z-[50] border-b border-[rgba(255,255,255,.2)] bg-white shadow-[0_1px_5px_0_#000]">
+      <header className="sticky top-0 z-[50] bg-white shadow-[0_2px_4px_rgba(0,0,0,0.08)]">
         <div className="relative flex h-[55px] w-full items-center justify-between px-[15px] text-center md:h-[100px] md:px-[20px]">
           <div className="absolute left-[15px] top-0 z-20 flex h-[55px] w-[60px] items-center text-left md:left-[20px] md:h-[100px] md:w-[100px]"><Link to="/" className="block" onClick={() => setMobileMenuOpen(false)}><img src={logoImg} alt="logo" className="h-auto w-[55px] object-contain md:w-[90px]" /></Link></div>
           <div className="pointer-events-none absolute inset-x-[80px] top-0 flex h-[55px] items-center justify-center text-[16px] leading-none tracking-[-1.5px] text-black md:inset-x-[130px] md:h-[100px] md:text-[30px] md:leading-none md:tracking-normal">
@@ -31,6 +31,11 @@ export default function SimpleHeader() {
               <svg className="h-[50px] w-[24px] md:h-[100px] md:w-[36px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
           </div>
+        </div>
+        <div className="flex h-[3px] w-full">
+          <div className="h-full flex-1 bg-[#005bac]" />
+          <div className="h-full flex-1 bg-[#00a3e0]" />
+          <div className="h-full flex-1 bg-[#f58220]" />
         </div>
       </header>
 
